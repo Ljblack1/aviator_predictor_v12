@@ -79,20 +79,22 @@ btn.addEventListener("click", () => {
     value = 0;
   }
   
-  loader.style.transform = `rotate(${1440}deg)`;
-  loader.style.transition = `all ${2}s ease`;
+  // loader.style.transform = `rotate(${1440}deg)`;
+  // loader.style.transition = `all ${2}s ease`;
   
   loadingFill.style.width = `${0}%`;
   
   setTimeout(() => {
     pending.style.display = "none";
     
-    loader.style.transform = `rotate(${0}deg)`;
-    loader.style.transition = `all ${0}s ease`;
+    // loader.style.transform = `rotate(${0}deg)`;
+    // loader.style.transition = `all ${0}s ease`;
     
     move.style.display = "block"; 
     
     loadingFill.style.width = `${100}%`;
+
+    console.log(move);
 
     move.textContent = `${moves[value]}x`;
   }, 3000);
