@@ -271,18 +271,24 @@ main {
 }
 
 .channel {
-  text-align: center;
-  display: grid;
+  /* text-align: center; */
+  /* display: grid; */
   background-color: red;
   width: 100%;
-  height: 3rem;
-  place-items: center;
+  height: 5rem;
+  padding: .5rem;
+  /* place-items: center; */
   color: #fff;
 }
 
 .channel p {
-  color: #fff;
+  color: #2f2f2f;
   margin: auto;
+}
+
+.channel a {
+  color: #2f2f2f;
+  text-decoration: underline;
 }
 
 .login-container {
@@ -308,6 +314,7 @@ main {
   flex-direction: column;
   transform: translate(-50%, -50%);
   width: 75%;
+  border-radius: 2rem;
   height: 10rem;
   background-color: #fff;
   z-index: 1000;
@@ -316,12 +323,22 @@ main {
   display: none;
 }
 
+.small-load > p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #565656;
+}
+
 .loader-con {
   display: flex;
   align-items: center;
 }
 
 .small-load .lds-ring {
+  transform: translateX(-2.55rem);
+}
+
+.pw {
   transform: translateX(-2.55rem);
 }
 
@@ -444,8 +461,20 @@ main {
   font-weight: 500;
 }
 
+.top-loader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
 .preloader img {
   width: 3.55rem;
+  animation: bounce 1.5s linear infinite;
+}
+
+.top-loader img {
+  width: 5rem;
   animation: bounce 1.5s linear infinite;
 }
 /* css for option.html Preloader end  here */
@@ -468,7 +497,7 @@ main {
   left: 0;
   width: 100%;
   height:15rem;
-  padding: .5rem;
+  /* padding: .5rem; */
 }
 
 .bg-section {
@@ -498,9 +527,63 @@ main {
 
 .move {
   text-align: center;
-  font-size: 2.55rem;
+  font-size: 3.55rem;
   margin-top: 4rem;
   font-weight: 700;
+  color: rgb(201, 1, 1);
+}
+
+.bg-section-one {
+  transform: scaleY(1.2);
+  margin-top: 2.5rem;
+}
+
+.section-container {
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  
+  display: grid;
+  grid-template-columns: repeat(4fr);
+  transform: scaleY(1.2);
+  margin-top: 1rem;
+  overflow: scroll;
+}
+
+.bg-section-two {
+  background-image: url(../images/sportybet/avigame_bg.jpg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 5.6rem;
+  left: 0;
+  transform: scaleY(1.2) translateX(100%);
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .8s ease;
+}
+
+/* .bg-section-two:nth-child(1) {
+  width: 100%;
+  transform: translateX(100%);
+}
+.bg-section-two:nth-child(2) {
+  transform: translateX(200%);
+}
+.bg-section-two:nth-child(3) {
+  transform: translateX(300%);
+}
+.bg-section-two:nth-child(4) {
+  transform: translateX(400%);
+} */
+
+
+
+.bg-section-two .move {
+  margin-top: 0;
 }
 
 .pending {
@@ -570,6 +653,53 @@ main {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.add-moves-contaner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  /* place-items: center; */
+  width: 80%;
+  height: 30%; 
+  background-color: #fff;
+  border-radius: 1rem;
+  z-index: 2000;
+  transition: all .3s ease;
+  display: none;
+}
+
+.show-move-container {
+  display: grid;
+}
+
+.add-moves-input {
+  padding: .5rem 1rem;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 1px solid rgb(135, 135, 135);
+  color: #181818;
+  border-radius: 1rem;
+  outline: transparent;
+}
+
+.add-move-btn,
+.close-move-btn {
+  background-color: #49a6e9;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 1rem;
+}
+
+.close-move-btn {
+  background-color: rgb(249, 96, 96);
 }
 
 

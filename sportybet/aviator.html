@@ -9,10 +9,28 @@
 <body>
   <div class="container">
     <div class="section-center">
+
+      <div class="add-moves-contaner">
+        <input type="text" class="add-moves-input" placeholder="Add move one">
+        <input type="text" class="add-moves-input" placeholder="Add move two">
+        <input type="text" class="add-moves-input" placeholder="Add move three">
+        <input type="text" class="add-moves-input" placeholder="Add move four">
+        <button class="add-move-btn">Push moves</button>
+        <button class="close-move-btn">Close</button>
+      </div>
+
       <!--Preloder one-->
       <div class="preloader">
         <p class="connect">Connecting...</p>
         <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+      </div>
+
+      <div class="small-load">
+        <p>Connecting</p>
+        <div class="loader-con">
+          <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+          <p class="pw">Please wait...</p>
+        </div>
       </div>
       <!--Preloder one ends here-->
       <header class="header">
@@ -20,18 +38,25 @@
       </header>
 
       <section class="main-section">
-        <section class="bg-section">
+        <div class="top-loader">
+          <img src="../images/aviatorload.png" alt="">
+        </div>
+        <section class="bg-section bg-section-one">
           <img class="loader" src="../images/aviatorload.png" alt="">
 
           <p class="move pending">Waiting for next round</p>
 
-          <p class="move value">2.36x</p>
+          <!-- <p class="move value">2.36x</p> -->
 
           <div class="loading-bar">
             <div class="loading-bar-fill"></div>
           </div>
 
           <img class="aviator-plane" src="../images/aviator-plane.png" alt="">
+        </section>
+
+        <section class="bg-section bg-section-two">
+          <p class="move value">2.36x</p>
         </section>
       </section>
 
@@ -41,7 +66,7 @@
         <button class="nxt-btn">Start Game</button>
 
         <div class="channel">
-          <p>Click to join are telegram group <a href="http://t.me/HackAviator1">King Alli</a></p>
+          <p>Click to join are telegram group <a href="http://t.me/HackAviator1">AVIATOR|PREDICTOR|</a></p>
         </div>
       </footer>
     </div>

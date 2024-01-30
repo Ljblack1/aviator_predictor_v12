@@ -1,12 +1,42 @@
-const moves = ["2.33", "5.67", "1.20", "13.55"];
+let moves = JSON.parse(localStorage.getItem("moves"));
 
 
 const loadingBar = document.querySelector('.loading-bar');
 const loadingFill = document.querySelector('.loading-bar-fill');
 const btn = document.querySelector('.nxt-btn');
-const move = document.querySelector('.value');
 const pending = document.querySelector('.pending');
 const loader = document.querySelector('.loader');
+const bgWithSignal = document.querySelector('.bg-section-two');
+const sLoader = document.querySelector('.small-load');
+const move = document.querySelector('.value');
+
+
+// working on adding moves
+const openMove = document.querySelector('.header');
+const moveContainer = document.querySelector('.add-moves-contaner');
+const closeMove = document.querySelector('.close-move-btn');
+const addMoveBtn = document.querySelector('.add-move-btn');
+const moveInputs = document.querySelectorAll('.add-moves-input');
+
+// open move container
+openMove.addEventListener('click', () => {
+  moveContainer.classList.add('show-move-container');
+})
+// closing move container
+closeMove.addEventListener('click', () => {
+  moveContainer.classList.remove('show-move-container');
+})
+
+addMoveBtn.addEventListener('click', () => {
+  const movesValues = moveInputs;
+  moves = [];
+  movesValues.forEach((movesValue) => {
+    moves.push(movesValue.value);
+    movesValue.value = '';
+  })
+  moveContainer.classList.remove('show-move-container');
+  localStorage.setItem("moves", JSON.stringify(moves));
+})
 
 // preloader
 
@@ -31,7 +61,17 @@ window.addEventListener('DOMContentLoaded', () => {
 let value = 0;
 
 btn.addEventListener("click", () => {
-  btn.textContent = "Next Game";
+  
+  sLoader.style.display = "flex";
+
+  bgWithSignal.style.transform = `scaleY(${1.2}) translateX(${100}%)`;
+  
+  setTimeout(() => {
+    btn.textContent = "Next Game";
+    sLoader.style.display = "none";
+    bgWithSignal.style.transform = `scaleY(${1.2}) translateX(${0})`;
+  }, 3000)
+
 
   value++;
 
