@@ -275,7 +275,7 @@ main {
   /* display: grid; */
   background-color: red;
   width: 100%;
-  height: 5rem;
+  height: 4.5rem;
   padding: .5rem;
   /* place-items: center; */
   color: #fff;
@@ -316,9 +316,10 @@ main {
   width: 75%;
   border-radius: 2rem;
   height: 10rem;
+  box-shadow: inset 1px 1px 30px rgba(0, 0, 0, .5);
   background-color: #fff;
   z-index: 1000;
-  padding: 2rem;
+  padding: 2rem 0 2rem 0;
   font-size: 1rem;
   display: none;
 }
@@ -506,8 +507,11 @@ main {
   background-size: cover;
   width: 100%;
   height: 100%;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
   border-radius: 1.55rem;
   border: 2px solid #292929;
+  border-top: none;
 }
 
 .loader {
@@ -588,7 +592,7 @@ main {
 
 .pending {
   font-size: 1rem;
-  margin-top: 5rem;
+  margin-top: 0;
 }
 
 .loading-bar {
